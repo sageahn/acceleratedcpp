@@ -1,0 +1,9 @@
+exe 02
+	: ch00-02.cpp
+	: <include>boost
+	;
+
+exe 03
+	: ch03.cpp
+	: <include>boost
+	;
