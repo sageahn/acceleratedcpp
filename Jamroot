@@ -1,3 +1,8 @@
+exe 00
+	: ch00_exercise.cpp
+	: <include>boost
+	;
+
 exe 02
 	: ch00-02.cpp
 	: <include>boost
