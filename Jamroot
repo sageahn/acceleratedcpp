@@ -1,5 +1,5 @@
-exe 00
-	: ch00_exercise.cpp
+exe 01
+	: ch01_exercise.cpp
 	: <include>boost
 	;
 
