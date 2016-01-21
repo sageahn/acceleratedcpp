@@ -6,5 +6,5 @@ pushd "boost\tools\build"
 call "bootstrap.bat"
 popd
 
-.\boost\tools\build\b2.exe -sBOOST_ROOT=.\boost
+call "build.bat"
 
