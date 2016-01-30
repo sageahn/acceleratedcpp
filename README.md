@@ -8,7 +8,9 @@ Accelerated C++ Study
 ### Windows
 	> bootstrap.bat
 ### Mac
-	$
+	$ brew install boost
+	$ brew install bjam
+
 ## Build
 ### Windows
 	> build.bat
