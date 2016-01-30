@@ -13,7 +13,7 @@ exe 03
 	: <include>boost
 	;
 
-logger
+exe logger
 	: logger.cpp
 	: <include>boost
 	;
