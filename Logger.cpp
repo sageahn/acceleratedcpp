@@ -7,11 +7,14 @@
 // [TODO] 아 하다보니 나는 C처럼 하고 있다. OK, Log Class를 만들어보자, 아니 Timestamp class를 먼저 만들자.
 
 #include <iostream>
+#include "Logger.hpp"
+#include "Timestamp.hpp"
 
 using namespace std;
 
 int main() {
 	string log;
+	Timestamp tp;
 
 	cout << "hello" << endl;
 	cout << "무엇을 하고 있나요? ";

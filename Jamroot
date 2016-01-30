@@ -1,3 +1,5 @@
+import boost ;
+
 exe 01
 	: ch01_exercise.cpp
 	: <include>boost
@@ -14,6 +16,6 @@ exe 03
 	;
 
 exe logger
-	: logger.cpp
+	: Timestamp.cpp Logger.cpp
 	: <include>boost
 	;
