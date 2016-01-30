@@ -13,6 +13,10 @@ exe 03
 	: <include>boost
 	;
 
+exe 03-00_0x
+	: ch03-00_0x.cpp
+	;
+
 #TODO : include path should be fixed for supporting multiple platform. below path just support mac os x and boost installed by brew.
 
 exe logger
