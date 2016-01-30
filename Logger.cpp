@@ -19,8 +19,8 @@ int main() {
 	cout << "hello" << endl;
 	cout << "무엇을 하고 있나요? ";
 	cin >> log;
-	cout << endl << log << endl;
-	tp.getDate();
+	tp.getTimestamp();
+	cout << " " << log << endl;
 
 	return 0;
 }

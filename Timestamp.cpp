@@ -5,10 +5,9 @@
 using namespace std;
 
 Timestamp::Timestamp() {
-	d = day_clock::local_day();
+	t = second_clock::local_time();
 }
 
-void Timestamp::getDate() {
-	cout << d << endl;
+void Timestamp::getTimestamp() {
+	cout << t;
 }
-

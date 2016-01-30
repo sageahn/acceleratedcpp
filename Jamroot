@@ -1,5 +1,3 @@
-import boost ;
-
 exe 01
 	: ch01_exercise.cpp
 	: <include>boost
