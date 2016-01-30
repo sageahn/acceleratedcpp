@@ -12,3 +12,8 @@ exe 03
 	: ch03.cpp
 	: <include>boost
 	;
+
+logger
+	: logger.cpp
+	: <include>boost
+	;
