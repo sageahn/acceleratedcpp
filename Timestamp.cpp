@@ -4,11 +4,11 @@
 
 using namespace std;
 
-Timestamp:Timestamp() {
-	d(day_clock::local_day());
+Timestamp::Timestamp() {
+	d = day_clock::local_day();
 }
 
-Timestamp:getDate() {
+void Timestamp::getDate() {
 	cout << d << endl;
 }
 
