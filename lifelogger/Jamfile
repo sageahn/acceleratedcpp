@@ -1,0 +1,6 @@
+#TODO : include path should be fixed for supporting multiple platform. below path just support mac os x and boost installed by brew.
+
+exe logger
+	: Timestamp.cpp Logger.cpp
+	: <include>/usr/local/include
+	;
