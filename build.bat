@@ -1,2 +1,1 @@
-.\boost\tools\build\b2.exe -sBOOST_ROOT=.\boost toolset=msvc
-
+.\boost\b2.exe -sBOOST_ROOT=.\boost toolset=msvc
