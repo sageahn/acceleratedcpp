@@ -1,0 +1,10 @@
+project
+: requirements
+    <library>/usr/local/lib/libboost_system.dylib
+    <library>/usr/local/lib/libboost_thread-mt.dylib
+;
+
+exe rclient
+	: rclient.cpp
+	: <include>/usr/local/include
+	;
