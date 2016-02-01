@@ -5,6 +5,7 @@
 // [TODO] log에 타임스탬프 찍기, 결국 저장할 때 들어가는 것
 // 	[j1] Boost.Date_Time http://www.boost.org/doc/libs/1_60_0/doc/html/date_time.html
 // [TODO] 아 하다보니 나는 C처럼 하고 있다. OK, Log Class를 만들어보자, 아니 Timestamp class를 먼저 만들자.
+// UTF-8으로 저장
 
 #include <iostream>
 #include "Logger.hpp"
@@ -24,4 +25,3 @@ int main() {
 
 	return 0;
 }
-
