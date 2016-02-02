@@ -1,8 +1,8 @@
 # [Accelerated C++](https://books.google.co.kr/books/about/Accelerated_C++.html?id=OaVQAAAAMAAJ&hl=en)
 Accelerated C++ Study
 ## Getting Started
-* Get Boost
-* Get Boost.Build
+* Get [Boost](http://www.boost.org/)
+* Get [Boost.Build](http://www.boost.org/build/)
 * Build
 
 ### Windows
@@ -16,3 +16,5 @@ Accelerated C++ Study
 	> build.bat
 ### Mac
 	$
+## Reference
+* [boost.build - Builtin tools](http://www.boost.org/build/doc/html/bbv2/reference/tools.html#bbv2.reference.tools.compiler.msvc)
