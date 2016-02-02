@@ -21,5 +21,3 @@ b2.exe install --prefix=.\
 
 popd
 
-call "build.bat"
-
