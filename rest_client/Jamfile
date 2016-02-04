@@ -1,10 +1,44 @@
+# I am refering to the Jamefile from libtorrent
+# https://github.com/libtorrent/libtorrent/blob/master/Jamfile
+
+import modules ;
+import os ;
+
+BOOST_ROOT = [ modules.peek : BOOST_ROOT ] ;
+CXXFLAGS = [ modules.peek : CXXFLAGS ] ;
+LDFLAGS = [ modules.peek : LDFLAGS ] ;
+
+ECHO "BOOST_ROOT =" $(BOOST_ROOT) ;
+ECHO "OS =" [ os.name ] ;
+
+VERSION = 0.1 ;
+
+local boost-library-search-path =
+  <search>/usr/local/lib
+  ;
+
+lib boost_filesystem : : <target-os>darwin <name>boost_filesystem-mt $(boost-library-search-path) ;
+lib boost_thread : : <target-os>darwin <name>boost_thread-mt $(boost-library-search-path) ;
+lib boost_system : : <target-os>darwin <name>boost_system-mt $(boost-library-search-path) ;
+
+lib boost_filesystem : : <name>boost_filesystem ;
+lib boost_thread : : <name>boost_thread ;
+lib boost_system : : <name>boost_system ;
+
+# openssl on linux/bsd/macos etc.
+lib crypto : : <name>crypto ;
+lib ssl : : <name>ssl ;
+
 project
 : requirements
-    <library>/usr/local/lib/libboost_system.dylib
-    <library>/usr/local/lib/libboost_thread-mt.dylib
+		<library>boost_system
+		<library>crypto
+		<library>ssl
 ;
 
 exe rclient
-	: rclient.cpp
+#	: rclient.cpp
+	: https_client.cpp
 	: <include>/usr/local/include
+	: <include>/usr/local/opt/openssl/include
 	;
