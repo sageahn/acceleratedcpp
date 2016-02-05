@@ -18,3 +18,4 @@ Accelerated C++ Study
 	$
 ## Reference
 * [boost.build - Builtin tools](http://www.boost.org/build/doc/html/bbv2/reference/tools.html#bbv2.reference.tools.compiler.msvc)
+* [cppreference.com](http://cppreference.com/)
