@@ -16,17 +16,17 @@ while true; do
 	echo 'retry...'
 done
 
-./bootstrap.sh
+./bootstrap.sh --without-libraries=python
 if [ 0 != $? ]; then
 	exit $?
 fi
 
-./b2 -q
+./b2 -q -s NO_BZIP2=1
 if [ 0 != $? ]; then
 	exit $?
 fi
 
-./b2 install --prefix=./
+./b2 install --prefix=./ -s NO_BZIP2=1
 if [ 0 != $? ]; then
 	exit $?
 fi
