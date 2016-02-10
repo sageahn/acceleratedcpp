@@ -13,6 +13,8 @@ Accelerated C++ Study
 
 ## Build
 ### Windows
+install [Visual Studio](https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx)
+
 	> build.bat
 ### Mac
 	$
