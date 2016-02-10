@@ -14,12 +14,22 @@ run `bootstrap.bat`
 ### Mac
 	$ brew install boost
 	$ brew install bjam
+### Ubuntu
+install g++
+
+	$ sudo apt-get install g++
+run bootstrap.sh
+
+	$ ./bootstrap.sh
 
 ## Build
 ### Windows
+
 	> build.bat
 ### Mac
 	$
+
 ## Reference
 * [boost.build - Builtin tools](http://www.boost.org/build/doc/html/bbv2/reference/tools.html#bbv2.reference.tools.compiler.msvc)
 * [cppreference.com](http://cppreference.com/)
+* [boost iostream installation](http://www.boost.org/doc/libs/1_60_0/libs/iostreams/doc/installation.html)
