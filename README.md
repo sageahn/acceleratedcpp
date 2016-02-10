@@ -6,6 +6,10 @@ Accelerated C++ Study
 * Build
 
 ### Windows
+install [Visual Studio](https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx)
+
+run `bootstrap.bat`
+
 	> bootstrap.bat
 ### Mac
 	$ brew install boost
@@ -13,8 +17,6 @@ Accelerated C++ Study
 
 ## Build
 ### Windows
-install [Visual Studio](https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx)
-
 	> build.bat
 ### Mac
 	$
