@@ -3,5 +3,5 @@
 
 exe logger
 	: Timestamp.cpp Logger.cpp
-	: <include>/usr/local/include
+	: <include>../boost
 	;
