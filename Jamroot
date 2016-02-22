@@ -1,7 +1,7 @@
 project : default-build debug ;
 
 build-project lifelogger ;
-#build-project rest_client ;
+build-project rest_client ;
 
 exe 01
 	: ch01_exercise.cpp

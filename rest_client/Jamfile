@@ -13,17 +13,7 @@ ECHO "OS =" [ os.name ] ;
 
 VERSION = 0.1 ;
 
-local boost-library-search-path =
-  <search>/usr/local/lib
-  ;
-
-lib boost_filesystem : : <target-os>darwin <name>boost_filesystem-mt $(boost-library-search-path) ;
-lib boost_thread : : <target-os>darwin <name>boost_thread-mt $(boost-library-search-path) ;
-lib boost_system : : <target-os>darwin <name>boost_system-mt $(boost-library-search-path) ;
-
-lib boost_filesystem : : <name>boost_filesystem ;
-lib boost_thread : : <name>boost_thread ;
-lib boost_system : : <name>boost_system ;
+lib boost_system : : <name>boost_system <search>/usr/local/lib ;
 
 # openssl on linux/bsd/macos etc.
 lib crypto : : <name>crypto ;
@@ -36,8 +26,7 @@ project
 		<library>ssl
 ;
 
-exe rclient
-#	: rclient.cpp
+exe https_client
 	: https_client.cpp
 	: <include>/usr/local/include
 	: <include>/usr/local/opt/openssl/include
