@@ -1,7 +1,19 @@
 #TODO : include path should be fixed for supporting multiple platform. below path just support mac os x and boost installed by brew.
 # UTF-8 저장합니다.
 
+#lib boost_data_time : : <name>boost_date_time <search>/usr/local/lib ;
+
+#project
+#: requirements
+#	<library>boost_data_time
+#;
+
 exe logger
 	: Timestamp.cpp Logger.cpp
-	: <include>../boost
+	: <include>/usr/local/include
 	;
+
+exe test
+	: LoggerTest.cpp
+	;
+
