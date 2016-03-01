@@ -2,11 +2,13 @@
 # UTF-8 저장합니다.
 
 #lib boost_data_time : : <name>boost_date_time <search>/usr/local/lib ;
+lib boost_program_options : : <name>boost_program_options <search>/usr/local/lib ;
 
-#project
-#: requirements
+project
+: requirements
 #	<library>boost_data_time
-#;
+	<library>boost_program_options
+;
 
 exe logger
 	: Timestamp.cpp Logger.cpp
@@ -15,5 +17,5 @@ exe logger
 
 exe test
 	: LoggerTest.cpp
+	: <include>/usr/local/include
 	;
-

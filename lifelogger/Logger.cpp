@@ -8,20 +8,56 @@
 // UTF-8으로 저장
 
 #include <iostream>
+#include <boost/program_options.hpp>
 #include "Logger.hpp"
 #include "Timestamp.hpp"
 
 using namespace std;
+namespace po = boost::program_options;
 
-int main() {
+int main(int argc, char* argv[]) {
 	string log;
 	Timestamp tp;
 
-	cout << "hello" << endl;
-	cout << "무엇을 하고 있나요? ";
-	cin >> log;
-	tp.getTimestamp();
-	cout << " " << log << endl;
+	try {
+    po::options_description desc("Allowed options");
 
-	return 0;
+    desc.add_options()
+	    ("help", "show help message")
+	    ("done", po::value<string>()->implicit_value("new_log"), "what I have done")
+    ;
+
+    po::variables_map vm;
+    po::store(po::parse_command_line(argc, argv, desc), vm);
+    po::notify(vm);
+
+    if (vm.count("help")) {
+        cout << desc << "\n";
+        return 0;
+    }
+
+    if (vm.count("done")) {
+        tp.getTimestamp();
+				cout << "에 " << vm["done"].as<string>() << "을(를) 했습니다.\n";
+				return 0;
+    }
+
+    if (argc >= 2)
+    {
+        return 0;
+    } else {
+			cout << "무엇을 하고 있나요? ";
+			cin >> log;
+			tp.getTimestamp();
+			cout << " " << log << endl;
+			return 0;
+		}
+  }
+  catch (exception& e)
+  {
+    cout << "Exception: " << e.what() << "\n";
+  }
+
+
+	return -1;
 }
