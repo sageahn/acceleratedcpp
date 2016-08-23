@@ -1,3 +1,8 @@
 #!/bin/bash
-./boost/b2 -sBOOST_ROOT=./boost toolset=darwin $1
+if [ "linux-gnu" = $OSTYPE ] ; then
+	TOOLSET=gcc
+else
+	TOOLSET=darwin
+fi
+./boost/b2 -sBOOST_ROOT=./boost toolset=$TOOLSET $1
 
