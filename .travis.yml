@@ -1,6 +1,6 @@
 language: C++
 install: true
-before script: ./bootstrap.sh
+before_script: ./bootstrap.sh
 script:
 - ./build.sh
 
