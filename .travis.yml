@@ -1,2 +1,6 @@
 language: C++
+install: true
+before script: ./bootstrap.sh
+script:
+- ./build.sh
 
