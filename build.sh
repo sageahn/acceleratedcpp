@@ -4,5 +4,5 @@ if [ "linux-gnu" = $OSTYPE ] ; then
 else
 	TOOLSET=darwin
 fi
-./boost/b2 -sBOOST_ROOT=./boost toolset=$TOOLSET $1
+./boost/b2 -sBOOST_ROOT=./boost toolset=$TOOLSET cxxflags=-std=c++14 $1
 
