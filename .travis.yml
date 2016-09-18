@@ -1,5 +1,5 @@
 language: C++
-install: true
+install: sudo apt-get install g++
 before_script: ./bootstrap.sh
 script:
 - ./build.sh
